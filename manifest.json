@@ -1,10 +1,6 @@
 {
   "v2": {
     "transposit": {
-      "dependencies": [{
-        "name": "yoko/raw_postman:latest",
-        "alias": "raw_postman"
-      }],
       "operations": [{
         "id": "webhook",
         "function": {
