@@ -31,6 +31,11 @@
         "function": {
           "js": "untitled.js"
         }
+      }, {
+        "id": "run_monitored_endpoints",
+        "function": {
+          "js": "run_monitored_endpoints.js"
+        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",
