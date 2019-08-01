@@ -22,18 +22,14 @@
           "webhook": true
         }
       }, {
-        "id": "get_slack_message",
-        "function": {
-          "parameters": [{
-            "name": "user",
-            "type": "STRING"
-          }],
-          "js": "get_slack_message.js"
+        "id": "get_monitors",
+        "tql": {
+          "tql": "SELECT * FROM raw_postman.get_monitors\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }, {
-        "id": "test_post_message",
-        "tql": {
-          "tql": "-- This SQL operation is useful to test the message you've\n-- constructed for your webhook. If you provide a Slack\n-- auth in \"Auth & user settings\", it will post a message\n-- to your Slackbot channel.\nSELECT * FROM slack.post_chat_message AS A\nJOIN this.get_slack_message AS B\nON A.$body.blocks = B.blocks\nAND A.$body.text = B.text\nWHERE A.$body.channel = (SELECT user_id from slack.test_auth)"
+        "id": "untitled",
+        "function": {
+          "js": "untitled.js"
         }
       }],
       "dataConnections": [{
