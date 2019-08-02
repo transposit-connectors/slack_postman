@@ -17,7 +17,7 @@
   blockToPost = blockToPost.concat(params.sections);
   const body = {
     channel: "yokotestchannel",
-    text: postText,
+    text: params.msg,
     blocks: blockToPost,
     as_user: "false",
     username: "transposit_bot"

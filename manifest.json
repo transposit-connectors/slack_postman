@@ -50,6 +50,10 @@
       }, {
         "id": "post_to_slack",
         "function": {
+          "parameters": [{
+            "name": "msg",
+            "type": "STRING"
+          }],
           "js": "post_to_slack.js"
         }
       }],
