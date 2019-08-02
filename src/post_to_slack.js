@@ -5,21 +5,14 @@
       "type": "section",
       "text": {
           "type": "mrkdwn",
-          "text": "Hello World!"
+          "text": params.msg
       }
     }];
   
-  blockToPost = blockToPost.concat(params.sections);
   const body = {
     channel: "yokotestchannel",
     text: "hello",
-    blocks: [{
-      "type": "section",
-      "text": {
-          "type": "mrkdwn",
-          "text": "Hello World!"
-      }
-    }],
+    blocks: blockToPost,
     as_user: "false",
     username: "transposit_bot"
   };
