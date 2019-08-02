@@ -40,11 +40,6 @@
           "js": "run_monitored_endpoints.js"
         }
       }, {
-        "id": "get_records",
-        "tql": {
-          "tql": "SELECT * FROM airtable.get_records\n  WHERE baseId=env.\n  AND table='github'\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
-        }
-      }, {
         "id": "post_to_slack",
         "function": {
           "parameters": [{
