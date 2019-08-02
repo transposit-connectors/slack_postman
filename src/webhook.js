@@ -6,22 +6,8 @@
  * https://www.transposit.com/docs/building/webhooks
  */
 ({ http_event }) => {
-  const parsed_body = http_event.parsed_body;
-  console.log(parsed_body);
-  // setImmediate(() => {
-  //   let user = api.user({type: "slack", workspaceId, userId});
-  //   if (user) {
-  //     let message = api.run('this.get_slack_message', {}, {asUser: user.id})[0];
-  //     api.run("slack_webhook.post_to_response_url", {
-  //       response_url: response_url,
-  //       post_body: message
-  //     });      
-  //   } else {
-  //     api.run("slack_webhook.post_to_response_url", {
-  //       response_url: response_url,
-  //       post_body: {text: 'Please configure your user'}
-  //     });      
-  //   }
-  // });
-  return { status_code: 200 };
+  const parsed_body = JSON.parse(http_event.body);
+  if (parsed_body.attachment.length > 0 && parsed_body.attachement[0].fallback.startsWith("Success")) {
+    
+  }
 }
