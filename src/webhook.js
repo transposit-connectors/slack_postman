@@ -7,6 +7,7 @@
  */
 ({ http_event }) => {
   const parsed_body = JSON.parse(http_event.body);
+  console.log(parsed_body)
   if (parsed_body.attachement[0].fallback.startsWith("Success")) {
      api.run('this.post_to_slack', {msg: JSON.stringify(parsed_body)});
   }
