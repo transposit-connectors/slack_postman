@@ -1,5 +1,5 @@
-// This app is triggered when 'build' workflow completed on branch 'add-orb' https://github.com/transposit/transposit/pull/1879
-// Once it gets a 'build success' from CircleCI, the app will run API tests in Postmate to test for two endpoints. 
+// This app is triggered when 'build' workflow completed on branch 'add-orb' https://github.com/transposit/transposit/pull/1879.  In practice it should be triggered after 'deploy' workflow
+// Once it gets a 'build success' from CircleCI, the app will run API tests in Postman to test for two endpoints. 
 // It posts to #yokotestchannel after getting build results and API speed results. 
 
 // Steps to trigger: 
