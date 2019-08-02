@@ -11,7 +11,7 @@
     speedText = speedText + `${e.item.name} took *${e.response.responseTime}ms* \n`;
   });
   
-  return api.run('this.post_to_slack', {msg: speedText});
+  return speedText;
 }
 
 /*
