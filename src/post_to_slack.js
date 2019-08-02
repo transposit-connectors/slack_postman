@@ -1,21 +1,25 @@
 (params) => {
   let postText = "API benchmarking";
   // post to slack
-  let blockToPost = [
-	{
-		"type": "section",
-		"text": {
-			"type": "mrkdwn",
-			"text": "Hello"
-        }
-    }
-	];
+  let blockToPost = [{
+      "type": "section",
+      "text": {
+          "type": "mrkdwn",
+          "text": "Hello World!"
+      }
+    }];
   
   blockToPost = blockToPost.concat(params.sections);
   const body = {
     channel: "yokotestchannel",
     text: "hello",
-    blocks: blockToPost,
+    blocks: [{
+      "type": "section",
+      "text": {
+          "type": "mrkdwn",
+          "text": "Hello World!"
+      }
+    }],
     as_user: "false",
     username: "transposit_bot"
   };
