@@ -43,6 +43,11 @@
           }],
           "js": "post_to_slack.js"
         }
+      }, {
+        "id": "README",
+        "function": {
+          "js": "README.js"
+        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",
