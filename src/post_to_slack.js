@@ -8,10 +8,7 @@
 			"type": "mrkdwn",
 			"text": "Hello"
         }
-    },
-      {
-		"type": "divider"
-	}
+    }
 	];
   
   blockToPost = blockToPost.concat(params.sections);
