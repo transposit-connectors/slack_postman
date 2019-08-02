@@ -69,7 +69,12 @@
       }],
       "javascriptAPIVersion": "3",
       "source": "src",
-      "userSettingsDisplay": "GENERATED"
+      "userSettingsDisplay": "GENERATED",
+      "appSettings": [{
+        "name": "baseId",
+        "type": "STRING",
+        "default": "apprPxwZdfRCd5w32"
+      }]
     }
   }
 }
