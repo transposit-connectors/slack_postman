@@ -10,7 +10,8 @@
   _.each(executions, (e) => {
     speedText = speedText + `${e.item.name} took *${e.response.responseTime}ms* \n`;
   });
-  return speedText
+  
+  return api.run('this.post_to_slack', {msg: speedText});
 }
 
 /*
