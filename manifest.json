@@ -4,6 +4,9 @@
       "dependencies": [{
         "name": "yoko/raw_postman:latest",
         "alias": "postman"
+      }, {
+        "name": "transposit/airtable:v2.*.*",
+        "alias": "airtable"
       }],
       "operations": [{
         "id": "webhook",
