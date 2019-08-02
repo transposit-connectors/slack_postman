@@ -8,7 +8,7 @@
 ({ http_event }) => {
   const parsed_body = http_event.parsed_body;
   console.log(parsed_body);
-  let text = parsed_body.attachements[0].text;
+  let text = parsed_body.attachments[0].text;
   
   if (text.startsWith("SUCCESS")) {
     let speedtext = text + "\n " + "API speed test results: \n" + api.run('this.run_monitored_endpoints');
