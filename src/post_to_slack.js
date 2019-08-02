@@ -6,8 +6,8 @@
 		"type": "section",
 		"text": {
 			"type": "mrkdwn",
-			"text": "Hello from Transposit Growth Bot! Here are some stats from yesterday. You could see the dashboard live here https://app.sigmacomputing.com/transposit/db/Growth-Dashboard-V2-6G9paXJwPT66FqfibFh9MT  Ask @yoko for permissions if you can't see it!"
-		}
+			"text": "Hello"
+        }
     },
       {
 		"type": "divider"
@@ -17,7 +17,7 @@
   blockToPost = blockToPost.concat(params.sections);
   const body = {
     channel: "yokotestchannel",
-    text: params.msg,
+    text: "hello",
     blocks: blockToPost,
     as_user: "false",
     username: "transposit_bot"
