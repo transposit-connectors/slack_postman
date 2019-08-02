@@ -30,11 +30,6 @@
           "tql": "SELECT * FROM raw_postman.get_monitors\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }, {
-        "id": "untitled",
-        "function": {
-          "js": "untitled.js"
-        }
-      }, {
         "id": "run_monitored_endpoints",
         "function": {
           "js": "run_monitored_endpoints.js"
