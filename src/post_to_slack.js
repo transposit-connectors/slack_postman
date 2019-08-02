@@ -1,14 +1,15 @@
 (params) => {
-
   // post to slack
-  let blockToPost = [{
-      "type": "section",
-      "text": {
-          "type": "mrkdwn",
-          "text": params.msg
+  let blockToPost = [
+    {
+      type: "section",
+      text: {
+        type: "mrkdwn",
+        text: params.msg
       }
-    }];
-  
+    }
+  ];
+
   const body = {
     channel: "yokotestchannel",
     text: "Hello! Your API performance test results are ready.",
