@@ -69,7 +69,12 @@
       }],
       "javascriptAPIVersion": "3",
       "source": "src",
-      "userSettingsDisplay": "GENERATED"
+      "userSettingsDisplay": "GENERATED",
+      "appSettings": [{
+        "name": "table_id",
+        "description": "tbl8ZbkNmPj14Mg5l/viwRS3f81QYgyi5rm",
+        "type": "STRING"
+      }]
     }
   }
 }
