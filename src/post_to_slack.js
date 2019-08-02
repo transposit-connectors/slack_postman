@@ -1,5 +1,5 @@
 (params) => {
-  let postText = "API benchmarking";
+
   // post to slack
   let blockToPost = [{
       "type": "section",
