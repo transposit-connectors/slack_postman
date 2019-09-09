@@ -1,5 +1,8 @@
 ({ http_event }) => {
   const parsed_body = http_event.parsed_body;
+  if (parsed_body.challenge) {
+    return parsed_body.challenge;
+  }
   console.log(parsed_body);
   let text = parsed_body.attachments[0].text;
 

@@ -11,7 +11,7 @@
   ];
 
   const body = {
-    channel: "yokotestchannel",
+    channel: "general",
     text: "Hello! Your API performance test results are ready.",
     blocks: blockToPost,
     as_user: "false",
