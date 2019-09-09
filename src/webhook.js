@@ -1,5 +1,6 @@
 ({ http_event }) => {
   const parsed_body = http_event.parsed_body;  console.log(parsed_body);
+  console.log(parsed_body.challenge);
   if (parsed_body.challenge) {
     return { 
       status_code: 200,
