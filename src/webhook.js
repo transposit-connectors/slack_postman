@@ -9,6 +9,12 @@
            };
   }
   
+  // find most recent message in the channel
+  // add a message to it
+  // then run a postman script
+  // then provide a 're-run' button
+  // then write up readme
+  
   return { 
       status_code: 200,
       headers: {'Content-type' : "text/plain" },
