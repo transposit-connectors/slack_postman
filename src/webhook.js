@@ -7,8 +7,9 @@
       headers: {'Content-type' : "text/plain" },
       body: parsed_body.challenge
            };
-    //return parsed_body.challenge;
   }
+  console.log("here");
+  console.log(parsed_body);
 
   let text = parsed_body.attachments[0].text;
 
