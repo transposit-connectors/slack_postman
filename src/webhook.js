@@ -8,6 +8,12 @@
       body: parsed_body.challenge
            };
   }
+  
+  return { 
+      status_code: 200,
+      headers: {'Content-type' : "text/plain" },
+      body: "abc"
+           };
   console.log("here");
   console.log(parsed_body);
 
