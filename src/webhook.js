@@ -3,7 +3,7 @@
   if (parsed_body.challenge) {
     return { 
       status_code: 200,
-      headers: {'Content-type' : "text/plain" }
+      headers: {'Content-type' : "text/plain" },
       body: {parsed_body.challenge}
            };
     //return parsed_body.challenge;
