@@ -18,7 +18,8 @@
             },
             "type": "OBJECT"
           }],
-          "js": "webhook.js"
+          "js": "webhook.js",
+          "lang": "js"
         },
         "access": {
           "requireApiKey": true,
@@ -32,7 +33,8 @@
       }, {
         "id": "run_monitored_endpoints",
         "function": {
-          "js": "run_monitored_endpoints.js"
+          "js": "run_monitored_endpoints.js",
+          "lang": "js"
         }
       }, {
         "id": "post_to_slack",
@@ -41,12 +43,14 @@
             "name": "msg",
             "type": "STRING"
           }],
-          "js": "post_to_slack.js"
+          "js": "post_to_slack.js",
+          "lang": "js"
         }
       }, {
         "id": "README",
         "function": {
-          "js": "README.js"
+          "js": "README.js",
+          "lang": "js"
         }
       }],
       "dataConnections": [{
@@ -74,7 +78,16 @@
           }
         }
       }, {
-        "ref": "slack.raw"
+        "ref": "slack.raw",
+        "overrides": {
+          "swagger": {
+            "oauthConfig": {
+              "scope": "chat:write:user chat:write:bot im:write im:read channels:history channels:read channels:write users:read users.profile:write files:write:user search:read emoji:read groups:read groups:write dnd:write dnd:read channels:history"
+            },
+            "executionLimits": {
+            }
+          }
+        }
       }],
       "javascriptAPIVersion": "3",
       "source": "src",
