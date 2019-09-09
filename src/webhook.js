@@ -1,9 +1,14 @@
 ({ http_event }) => {
-  const parsed_body = http_event.parsed_body;
+  const parsed_body = http_event.parsed_body;  console.log(parsed_body);
   if (parsed_body.challenge) {
-    return parsed_body.challenge;
+    return { 
+      status_code: 200,
+      headers: {'Content-type' : "text/plain" }
+      body: {parsed_body.challenge}
+           };
+    //return parsed_body.challenge;
   }
-  console.log(parsed_body);
+
   let text = parsed_body.attachments[0].text;
 
   if (text.startsWith("SUCCESS")) {
