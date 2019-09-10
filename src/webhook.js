@@ -20,8 +20,14 @@
     
     api.run("this.post_to_slack", { msg: speedtext });
   }
-  
+  /*
+    return {
+      status_code: 200,
+      headers: {'Content-type' : "text/plain" },
+      body: parsed_body.challenge
+           };
+  */
   return {
-    status: "200"
+    status_code: 200
   }
 }
