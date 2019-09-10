@@ -98,6 +98,10 @@
       }],
       "javascriptAPIVersion": "3",
       "source": "src",
+      "userSettings": [{
+        "name": "monitorID",
+        "type": "STRING"
+      }],
       "userSettingsDisplay": "GENERATED",
       "appSettings": [{
         "name": "baseId",
