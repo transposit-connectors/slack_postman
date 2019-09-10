@@ -29,6 +29,7 @@
   let result = api.run("slack.post_chat_message", {
     $body: JSON.stringify(body)
   });
+  console.log(result);
 }
 
 /*

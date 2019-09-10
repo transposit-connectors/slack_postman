@@ -53,23 +53,6 @@
           "lang": "js"
         }
       }, {
-        "id": "webhook_1",
-        "function": {
-          "parameters": [{
-            "name": "http_event",
-            "default": {
-              "text": "{\"http_method\": \"GET\", \"query_parameters\": {}, \"headers\": {}, \"body\": \"\"}"
-            },
-            "type": "OBJECT"
-          }],
-          "js": "webhook_1.js",
-          "lang": "js"
-        },
-        "access": {
-          "requireApiKey": true,
-          "webhook": true
-        }
-      }, {
         "id": "post_chat_message",
         "tql": {
           "tql": "SELECT * FROM slack.post_chat_message\n  WHERE $body=(SELECT {\n\n    'channel' : 'general',\n    'as_user' : true,\n    'text' : 'test dan',\n    \n  })\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
