@@ -11,6 +11,7 @@
       },
       response_url: response_url
     });
+    });
      
       /*
     if (parsed_slack_response.actions[0].action_id = "rerunbutton") {
