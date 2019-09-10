@@ -101,6 +101,10 @@
       "userSettings": [{
         "name": "monitorID",
         "type": "STRING"
+      }, {
+        "name": "channelName",
+        "description": "Name of the channel that we'll post our messages to",
+        "type": "STRING"
       }],
       "userSettingsDisplay": "GENERATED",
       "appSettings": [{
