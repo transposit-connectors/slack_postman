@@ -109,7 +109,13 @@
         "type": "STRING",
         "default": "general"
       }],
-      "userSettingsDisplay": "GENERATED"
+      "userSettingsDisplay": "GENERATED",
+      "appSettings": [{
+        "name": "monitorID",
+        "description": "Postman monitorID (something like 1e9d3472-4c46-4420-b718-68faec27bd4a)",
+        "type": "STRING",
+        "default": "1e9d3472-4c46-4420-b718-68faec27bd4f"
+      }]
     }
   }
 }
