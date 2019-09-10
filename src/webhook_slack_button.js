@@ -3,14 +3,34 @@
     const parsed_slack_response = JSON.parse(parsed_body.payload);
     const response_url = parsed_slack_response.response_url;
   
+  
     setImmediate(() => {
       const speedtext =
             "API speed test results (re-running):\n" +
             api.run("this.run_monitored_endpoints");
+        let blockToPost = [{
+        "type": "section",
+        "text": {
+            "type": "mrkdwn",
+            "text": speedText
+        },
+        "accessory": {
+            "type": "button",
+            "text": {
+                "type": "plain_text",
+                "text": "Re-run Postman"
+            },
+            "value": "rerun",
+            "action_id": "rerunbutton"
+        }
+    }];
+        const body = {
+        channel: env.get('channelName'),
+        blocks: blockToPost,
+        as_user: true
+      };
       api.run("slack_webhook.post_to_response_url", {
-      post_body: {
-        text: speedtext
-      },
+      post_body: body,
       response_url: response_url
     });
     });
