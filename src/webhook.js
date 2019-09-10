@@ -16,7 +16,7 @@
       "API speed test results (for build: "+build_url+"):\n" +
       api.run("this.run_monitored_endpoints");
     
-    api.run("this.post_to_slack", { msg: speedtext });
+    api.run("this.post_to_slack", { msg: speedtext }, {});
   }
   /*
     return {
