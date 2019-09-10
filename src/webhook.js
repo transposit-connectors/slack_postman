@@ -8,8 +8,6 @@
   // then provide a 're-run' button
   // then write up readme
   
-  console.log("here");
-  console.log(parsed_body);
   const outcome = parsed_body.payload.outcome;
   const build_url = parsed_body.payload.build_url;
   
