@@ -1,7 +1,7 @@
 (params) => {
   const _ = require("underscore.js");
-  const monitorId = '1e9d3472-4c46-4420-b718-68faec27bd4f';
-  let result = api.run('postman.run_monitor', {id: monitorId})[0];
+  const monitorID = user_setting.get('monitorID');
+  let result = api.run('postman.run_monitor', {id: monitorID})[0];
   let assertions = result.run.stats.assertions;
   let failedText = assertions.failed + " assertions failed.";
   let executions = result.run.executions;

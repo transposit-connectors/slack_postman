@@ -17,7 +17,7 @@
     }];
 
     const body = {
-        channel: "general",
+        channel: user_setting.get('channelName'),
         blocks: blockToPost,
         as_user: true
     };
