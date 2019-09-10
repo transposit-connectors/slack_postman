@@ -9,11 +9,6 @@
         "alias": "slack"
       }],
       "operations": [{
-        "id": "get_monitors",
-        "tql": {
-          "tql": "SELECT * FROM postman.get_monitors\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
-        }
-      }, {
         "id": "run_monitored_endpoints",
         "function": {
           "js": "run_monitored_endpoints.js",
