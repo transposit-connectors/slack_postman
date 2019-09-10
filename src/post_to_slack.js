@@ -15,7 +15,7 @@
 				"text": "Re-run Postman"
 			},
 			"value": "rerun",
-			"action_id": "button"
+			"action_id": "rerunbutton"
 		}
 	}
 ];
