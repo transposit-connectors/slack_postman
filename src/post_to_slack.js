@@ -17,7 +17,7 @@
     }];
 
     const body = {
-        channel: user_setting.get('channelName'),
+        channel: env.get('channelName'),
         blocks: blockToPost,
         as_user: true
     };
