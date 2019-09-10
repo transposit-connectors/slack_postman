@@ -7,8 +7,9 @@
     setImmediate(() => {
       console.log("here2");
       const speedtext =
-            "API speed test results (re-running):\n" +
-            api.run("this.run_monitored_endpoints");
+            "API speed test results (re-running):\n" + "";
+            //api.run("this.run_monitored_endpoints");
+      console.log("here2.5");
         let blockToPost = [{
         "type": "section",
         "text": {
@@ -25,6 +26,7 @@
             "action_id": "rerunbutton"
         }
     }];
+      
         const body = {
         channel: 'general',
         blocks: blockToPost,
