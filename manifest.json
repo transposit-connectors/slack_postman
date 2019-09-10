@@ -64,6 +64,9 @@
           }],
           "js": "webhook_1.js",
           "lang": "js"
+        },
+        "access": {
+          "requireApiKey": true
         }
       }],
       "dataConnections": [{
