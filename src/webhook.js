@@ -20,4 +20,8 @@
     
     api.run("this.post_to_slack", { msg: speedtext });
   }
+  
+  return {
+    status: "200"
+  }
 }
