@@ -4,10 +4,12 @@
     const response_url = parsed_slack_response.response_url;
   
     setImmediate(() => {
-      api.run("this.run_monitored_endpoints");
+      const speedtext =
+            "API speed test results (re-running):\n" +
+            api.run("this.run_monitored_endpoints");
       api.run("slack_webhook.post_to_response_url", {
       post_body: {
-        text: "Don't call me; I'll call you."
+        text: speedtext
       },
       response_url: response_url
     });
