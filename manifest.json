@@ -61,6 +61,18 @@
           "requireApiKey": true,
           "webhook": true
         }
+      }, {
+        "id": "response_body",
+        "function": {
+          "parameters": [{
+            "name": "msg",
+            "description": "Message to display",
+            "type": "STRING",
+            "required": true
+          }],
+          "js": "response_body.js",
+          "lang": "js"
+        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",
