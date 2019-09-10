@@ -18,7 +18,6 @@
 
     const body = {
         channel: "general",
-        text: "Hello! Your API performance test results are ready.",
         blocks: blockToPost,
         as_user: true
     };
