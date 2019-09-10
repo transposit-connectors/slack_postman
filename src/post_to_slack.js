@@ -24,8 +24,7 @@
     channel: "general",
     text: "Hello! Your API performance test results are ready.",
     blocks: blockToPost,
-    as_user: "false",
-    username: "transposit_bot"
+    as_user: true
   };
   let result = api.run("slack.post_chat_message", {
     $body: JSON.stringify(body)
