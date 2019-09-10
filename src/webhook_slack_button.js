@@ -2,7 +2,7 @@
   const parsed_body = http_event.parsed_body;  
   console.log(parsed_body);
   let speedtext =
-      "API speed test results (for build: "+build_url+"):\n" +
+      "API speed test results (re-running):\n" +
       api.run("this.run_monitored_endpoints");
       api.run("this.post_to_slack", { msg: speedtext }, {});
   
