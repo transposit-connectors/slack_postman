@@ -1,6 +1,4 @@
-({
-    http_event
-}) => {
+({http_event}) => {
     const parsed_body = http_event.parsed_body;
 
     const outcome = parsed_body.payload.outcome;
@@ -13,7 +11,7 @@
 
         api.run("this.post_to_slack", {
             msg: speedtext
-        }, {});
+        });
     }
 
     return {
