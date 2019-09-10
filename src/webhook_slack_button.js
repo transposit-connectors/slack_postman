@@ -26,7 +26,7 @@
             "action_id": "rerunbutton"
         }
     }];
-      
+      console.log("here2.6");
         const body = {
         channel: 'general',
         blocks: blockToPost,
