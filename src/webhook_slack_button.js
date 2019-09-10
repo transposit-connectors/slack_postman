@@ -28,7 +28,7 @@
     }];
       console.log("here2.6");
         const body = {
-        channel: 'general',
+        channel: env.get('channelName'),
         blocks: blockToPost,
         as_user: true
       };
