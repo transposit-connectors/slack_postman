@@ -115,6 +115,11 @@
         "description": "Postman monitorID (something like 1e9d3472-4c46-4420-b718-68faec27bd4a)",
         "type": "STRING",
         "default": "1e9d3472-4c46-4420-b718-68faec27bd4f"
+      }, {
+        "name": "channelName",
+        "description": "Name of the channel that we'll post our messages to. The bot must be invited to this channel.",
+        "type": "STRING",
+        "default": "general"
       }]
     }
   }
