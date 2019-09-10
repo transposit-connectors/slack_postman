@@ -12,25 +12,11 @@
 			"type": "button",
 			"text": {
 				"type": "plain_text",
-				"text": "Click Me"
+				"text": "Re-run Postman"
 			},
-			"value": "click_me_123",
+			"value": "rerun",
 			"action_id": "button"
 		}
-	},
-	{
-		"type": "actions",
-		"block_id": "actionblock789",
-		"elements": [
-			{
-				"type": "button",
-				"text": {
-					"type": "plain_text",
-					"text": "Link Button"
-				},
-				"url": "https://api.slack.com/block-kit"
-			}
-		]
 	}
 ];
   
