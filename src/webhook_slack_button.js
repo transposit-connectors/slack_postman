@@ -26,7 +26,7 @@
         }
     }];
         const body = {
-        channel: env.get('channelName'),
+        channel: 'general',
         blocks: blockToPost,
         as_user: true
       };
