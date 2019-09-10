@@ -14,7 +14,7 @@
         "type": "section",
         "text": {
             "type": "mrkdwn",
-            "text": "this is text"
+            "text": speedtext
         },
         "accessory": {
             "type": "button",
