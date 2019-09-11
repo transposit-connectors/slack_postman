@@ -22,15 +22,16 @@
                 "type": "plain_text",
                 "text": "Re-run Postman"
             },
-            "value": "rerun",
-            "action_id": "rerunbutton"
+            "value": "rerun2",
+            "action_id": "rerunbutton2"
         }
     }];
       console.log("here2.6");
         const body = {
         channel: env.get('channelName'),
         blocks: blockToPost,
-        replace_original: false // , as_user: true
+        //replace_original: false, 
+        as_user: true
       };
       console.log("here3");
       api.run("slack_webhook.post_to_response_url", {
