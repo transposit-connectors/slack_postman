@@ -12,6 +12,7 @@
             api.run("this.run_monitored_endpoints");
    const body = api.run("this.response_body",{msg: speedtext})[0];
       body.thread_ts = parsed_slack_response.message.ts;
+      console.log(body);
       api.run("slack_webhook.post_to_response_url", {
       post_body: body,
       response_url: response_url
