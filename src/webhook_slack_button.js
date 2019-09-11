@@ -1,6 +1,6 @@
 ({http_event}) => {
     const parsed_body = http_event.parsed_body;
-    const response_url2 = http_event.parsed_body.response_url;
+  //  const response_url2 = http_event.parsed_body.response_url;
 
     const parsed_slack_response = JSON.parse(parsed_body.payload);
     const response_url = parsed_slack_response.response_url;
@@ -10,8 +10,8 @@
       const speedtext =
             "API speed test results (re-running):\n" + 
             api.run("this.run_monitored_endpoints");
-
-        let blockToPost = [{
+   const body = api.run("this.response_body",{msg: speedtext})[0];
+ /*       let blockToPost = [{
         "type": "section",
         "text": {
             "type": "mrkdwn",
@@ -33,7 +33,7 @@
         blocks: blockToPost,
         //replace_original: false, makes ephemeral
         as_user: true
-      };
+      }; */
       api.run("slack_webhook.post_to_response_url", {
       post_body: body,
       response_url: response_url
