@@ -35,7 +35,8 @@
       console.log("here3");
       api.run("slack_webhook.post_to_response_url", {
       post_body: body,
-      response_url: response_url
+      response_url: response_url,
+        replace_original: false
     });
       console.log("here4");
     });
