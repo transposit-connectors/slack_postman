@@ -30,7 +30,7 @@
         const body = {
         channel: env.get('channelName'),
         blocks: blockToPost,
-        as_user: true
+        replace_original: false, as_user: true
       };
       console.log("here3");
       api.run("slack_webhook.post_to_response_url", {
