@@ -21,6 +21,5 @@
         blocks: blockToPost,
         as_user: true
     };
-  console.log("here in response");
   return body;
 }

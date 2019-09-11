@@ -18,7 +18,6 @@
       response_url: response_url
     });
     });
-     
 
     return {
         status_code: 200,
