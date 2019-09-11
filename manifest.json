@@ -142,6 +142,8 @@
         "type": "STRING",
         "default": "test"
       }]
-    }
+    },
+    "description": "Lets you run a Postman monitor after a CircleCI build completes successfully.",
+    "displayName": "Slack Postman"
   }
 }
