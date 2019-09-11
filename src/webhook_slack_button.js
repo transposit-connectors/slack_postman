@@ -5,7 +5,6 @@
     const response_url = parsed_slack_response.response_url;
     console.log(parsed_slack_response);
   
-   // setImmediate(() => {
 
       const speedtext =
             "API speed test results (re-running):\n" + 
@@ -13,15 +12,10 @@
    const body = api.run("this.response_body",{msg: speedtext})[0];
       body.thread_ts = parsed_slack_response.message.ts;
       console.log(body);
+  // async code didn't let us thread?
    let result = api.run("slack.post_chat_message", {
         $body: JSON.stringify(body)
     });
-      /*
-      api.run("slack_webhook.post_to_response_url", {
-      post_body: body,
-      response_url: response_url
-    }); */
-    //});
 
     return {
         status_code: 200,
