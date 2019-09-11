@@ -15,7 +15,7 @@
             msg: speedtext
         });
     }
-  }
+  });
     return {
         status_code: 200
     }
