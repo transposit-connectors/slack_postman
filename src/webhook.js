@@ -2,7 +2,6 @@
   const parsed_body = http_event.parsed_body;
   setImmediate(() => {
     
-  console.log(parsed_body);
     const outcome = parsed_body.payload.outcome;
     const build_url = parsed_body.payload.build_url;
 

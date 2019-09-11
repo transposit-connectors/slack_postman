@@ -9,7 +9,6 @@
             api.run("this.run_monitored_endpoints");
    const body = api.run("this.response_body",{msg: speedtext, button: false})[0];
       body.thread_ts = parsed_slack_response.message.ts;
-      console.log(body);
   // async code didn't let us thread?
    let result = api.run("slack.post_chat_message", {
         $body: JSON.stringify(body)
