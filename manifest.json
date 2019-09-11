@@ -7,6 +7,9 @@
       }, {
         "name": "transposit/slack_webhook:v1.*.*",
         "alias": "slack_webhook"
+      }, {
+        "name": "transposit/postman:v1.*.*",
+        "alias": "postman"
       }],
       "operations": [{
         "id": "run_monitored_endpoints",
