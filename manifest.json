@@ -2,9 +2,6 @@
   "v2": {
     "transposit": {
       "dependencies": [{
-        "name": "yoko/raw_postman:latest",
-        "alias": "postman"
-      }, {
         "name": "transposit/slack:v3.*.*",
         "alias": "slack"
       }, {
