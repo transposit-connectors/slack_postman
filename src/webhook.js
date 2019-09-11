@@ -1,4 +1,6 @@
 ({http_event}) => {
+  
+  setImmediate(() => {
     const parsed_body = http_event.parsed_body;
   console.log(parsed_body);
     const workspaceId = parsed_body.team_id;
@@ -16,7 +18,7 @@
             msg: speedtext
         });
     }
-
+  }
     return {
         status_code: 200
     }
