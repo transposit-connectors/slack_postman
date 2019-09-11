@@ -3,6 +3,7 @@
 
     const parsed_slack_response = JSON.parse(parsed_body.payload);
     const response_url = parsed_slack_response.response_url;
+    console.log(parsed_slack_response);
   
     setImmediate(() => {
 
