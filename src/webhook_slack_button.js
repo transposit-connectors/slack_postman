@@ -1,18 +1,16 @@
 ({http_event}) => {
     const parsed_body = http_event.parsed_body;
     const response_url2 = http_event.parsed_body.response_url;
-  console.log(response_url2);
+
     const parsed_slack_response = JSON.parse(parsed_body.payload);
     const response_url = parsed_slack_response.response_url;
-    console.log("here");
-  console.log(response_url);
   
     setImmediate(() => {
-      console.log("here2");
+
       const speedtext =
             "API speed test results (re-running):\n" + 
             api.run("this.run_monitored_endpoints");
-      console.log("here2.5");
+
         let blockToPost = [{
         "type": "section",
         "text": {
@@ -29,20 +27,17 @@
             "action_id": "rerunbutton2"
         }
     }];
-      console.log("here2.6");
+
         const body = {
         channel: env.get('channelName'),
         blocks: blockToPost,
-        //replace_original: false, 
+        //replace_original: false, makes ephemeral
         as_user: true
       };
-      console.log("here3");
       api.run("slack_webhook.post_to_response_url", {
       post_body: body,
-      response_url: response_url,
-
+      response_url: response_url
     });
-      console.log("here4");
     });
      
       /*
