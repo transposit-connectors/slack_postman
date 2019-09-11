@@ -4,7 +4,9 @@
         "text": {
             "type": "mrkdwn",
             "text": params.msg
-        },
+        }];
+     if (params.button) {
+       blockToPost.push({
         "accessory": {
             "type": "button",
             "text": {
@@ -14,7 +16,7 @@
             "value": "rerun",
             "action_id": "rerunbutton"
         }
-    }];
+    });
 
     const body = {
         channel: env.get('channelName'),

@@ -69,6 +69,12 @@
             "description": "Message to display",
             "type": "STRING",
             "required": true
+          }, {
+            "name": "button",
+            "default": {
+              "text": "true"
+            },
+            "type": "BOOLEAN"
           }],
           "js": "response_body.js",
           "lang": "js"
