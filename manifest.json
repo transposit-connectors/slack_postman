@@ -140,7 +140,7 @@
         "name": "channelName",
         "description": "Name of the channel that we'll post our messages to. The bot must be invited to this channel.",
         "type": "STRING",
-        "default": "general"
+        "default": "test"
       }]
     }
   }
