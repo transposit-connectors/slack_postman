@@ -1,8 +1,11 @@
 ({http_event}) => {
     const parsed_body = http_event.parsed_body;
+    const response_url2 = http_event.parsed_body.response_url;
+  console.log(response_url2);
     const parsed_slack_response = JSON.parse(parsed_body.payload);
     const response_url = parsed_slack_response.response_url;
     console.log("here");
+  console.log(response_url);
   
     setImmediate(() => {
       console.log("here2");
