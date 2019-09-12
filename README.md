@@ -9,11 +9,11 @@ You need to have:
 * a Transposit account
 * a Slack account (in a workspace where you can install apps)
 * a Postman account that is monitoring at least one URL ([more here](https://learning.getpostman.com/docs/postman/monitors/setting_up_monitor/))
-* a repository with CircleCI configured to build it and with an Orb to post notifications on CircleCI runs ([more here](https://circleci.com/docs/2.0/notifications/#using-the-slack-orb)).
+* a repository with CircleCI configured to build it and with an Orb to post notifications on CircleCI runs ([more here](https://circleci.com/docs/2.0/notifications/#using-the-slack-orb))
 
 Here's a sample CircleCI config.yml to add to your repo:
 
-```
+```yaml
 version: 2.1
 commands:
   notify_job_status:
@@ -34,7 +34,7 @@ jobs:
       - slack/notify:
           color: '#42e2f4'
           message: Your build has finished.
-          webhook: <slack webhook>
+          webhook: <slack webhook> # from the CircleCI instructions on setting up an orb
       - notify_job_status
 orbs:
   slack: circleci/slack@3.3.0
@@ -46,16 +46,18 @@ workflows:
 
 ## Set things up
 
-[Fork the application](https://console.transposit.com/t/transposit-sample/slack_postman/code/op/webhook_circleci). Go to **Deploy > Endpoints** and copy the webhook URL for both `webhook_circleci` and `webhook_slack_button`.
+[Fork the application](https://console.transposit.com/t/transposit-sample/slack_postman/code/op/webhook_circleci). 
+
+Go to **Deploy > Endpoints** and copy the webhook URL for both `webhook_circleci` and `webhook_slack_button`.
 
 Create a Slack application (call it PostmanBot). You'll want to make sure that you set up a [bot user](/docs/guides/slack/chatbots/) and enable [interactive components](/docs/guides/slack/workflows/). 
 
 Configuration summary of the Slack application:
-* When setting up the interactive component, add the URL you noted for `webhook_slack_button` as the 'Request URL'.
-* For OAuth scopes, set it to `chat:write:bot bot`.
-* For the OAuth section, use `https://accounts.transposit.com/oauth/v2/handle-redirect` 
-* Make sure you add a bot user.
-* Install your application into your workspace.
+* In **Interactive Components > Interactivity**, add the URL you noted for `webhook_slack_button` as the 'Request URL'.
+* In **OAuth & Permissions > Scopes**, set it to `chat:write:bot bot`.
+* In **OAuth & Permissions > Redirect URLs**, use `https://accounts.transposit.com/oauth/v2/handle-redirect` 
+* In **Bot Users**, add a bot user with the name PostmanBot.
+* In **Basic Information**, install your application into your workspace.
 
 Go to your Transposit application and provide your credentials for both Postman and Slack. You'll have to do this both **Code > Development > Auth & Settings**  and in **Deploy > Production Keys**. Make sure you authorize following [these steps](/docs/guides/slack/chatbots/#acting-as-your-bot-user) because you want the application to act as PostmanBot, not as you.
 
